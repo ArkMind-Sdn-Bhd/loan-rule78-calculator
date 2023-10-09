@@ -21,8 +21,7 @@ function App() {
         for (let month = 1; month <= loanTermInMonths; month++) {
             const interestFraction = (loanTermInMonths - month + 1) / 78;
             const interestPayment = totalInterest * interestFraction;
-            const totalPayment = interestPayment + remainingLoanAmount;
-            const principalPayment = totalPayment - interestPayment;
+            const principalPayment = totalInterest - interestPayment;
 
             schedule.push({
                 month,
